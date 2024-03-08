@@ -1,0 +1,63 @@
+/* App.css */
+
+.App {
+  width: 100%; /* Make the website occupy the full width */
+  height: 100vh; /* Make the website occupy the full height of the viewport */
+  text-align: center;
+  background-color: #D0F5BE;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  min-height: 100vh; /* Ensure the minimum height of the container is 100% of the viewport height */
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #D0F5BE;
+  color: #071952;
+  flex: 1;
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* Define the animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-100%); /* Start off-screen from the top */
+  }
+  100% {
+    opacity: 1; /* End with opacity 1 */
+    transform: translateY(0); /* Slide down to the original position */
+  }
+
+}
+
+.footer {
+  background-color: #D0F5BE;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu li {
+    margin-right: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}

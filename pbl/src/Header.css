@@ -1,0 +1,93 @@
+/* Header.css */
+.header {
+    background-color: #35A29F;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color:  #DCFFB7;
+    text-decoration: none;
+    animation-name: slideFromLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1; /* Play the animation once */
+    animation-fill-mode: forwards;
+    will-change: transform;
+    z-index: 999999
+  }
+
+/* Define the custom animation */
+@keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen from the left */
+    }
+    100% {
+      transform: translateX(0); /* Slide to the original position */
+    }
+  }
+  
+  .menu {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color:  #DCFFB7;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Define the animation */
+@keyframes slideDown {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+      transform: translateY(-100%); /* Start off-screen from the top */
+    }
+    100% {
+      opacity: 1; /* End with opacity 1 */
+      transform: translateY(0); /* Slide down to the original position */
+    }
+  }
+
+
+  .menu li a:hover {
+    color: #fe9e0d;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .menu li {
+      margin-right: 10px;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  
+    .footer {
+      padding: 10px;
+    }
+  }
